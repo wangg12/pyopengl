@@ -33,7 +33,8 @@ class EGLPlatform( baseplatform.BasePlatform ):
         try:
             return ctypesloader.loadLibrary(
                 ctypes.cdll,
-                'GL', 
+                #'GL',
+                'OpenGL', 
                 mode=ctypes.RTLD_GLOBAL 
             )
         except OSError:
